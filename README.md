@@ -44,38 +44,3 @@ pip install -r requirements.txt
  3. 执行分析
 python code/main.py
 程序运行完成后，所有图表将保存在 figures/ 目录下。
-分析流程
-text
-数据读取 → 通道提取（EEG Fpz-Cz）→ 单位转换（V → μV）
-    ↓
-预处理流水线：
-  ├── 0.5–35Hz 四阶巴特沃斯带通滤波
-  ├── 50Hz 工频陷波（Q=30）
-  ├── 线性去趋势
-  └── Z-score 标准化
-    ↓
-多域分析：
-  ├── 时域统计
-  ├── 频域分析（FFT功率谱密度）
-  └── 时频分析（STFT）
-    ↓
-频段能量特征提取（δ/θ/α/σ/β）
-    ↓
-可视化对比
-主要结果
-频段	实验室记录	居家记录
-δ（0.5–4Hz）	76.18%	81.56%
-θ（4–8Hz）	9.94%	7.98%
-α（8–13Hz）	3.61%	4.97%
-σ（11–16Hz）	2.67%	4.14%
-β（13–30Hz）	6.95%	4.09%
-指标	实验室记录	居家记录
-α/δ 能量比	0.0473	0.0610
-峰峰值	16.12	182.03
-参考文献
-Lorenzo J L, Barbanoj M J. Variability of sleep parameters across multiple laboratory sessions in healthy young subjects: the "very first night effect". Psychophysiology, 2002, 39(4): 409-413.
-Kemp B, Zwinderman A H, Tuk B, et al. Analysis of a sleep-dependent neuronal feedback loop: the slow-wave microcontinuity of the EEG. IEEE Transactions on Biomedical Engineering, 2000, 47(9): 1185-1194.
-
-Goldberger A L, Amaral L A N, Glass L, et al. PhysioBank, PhysioToolkit, and PhysioNet: components of a new research resource for complex physiologic signals. Circulation, 2000, 101(23): E215-E220.
-
-Virtanen P, Gommers R, Oliphant T E, et al. SciPy 1.0: fundamental algorithms for scientific computing in Python. Nature Methods, 2020, 17(3): 261-272.
