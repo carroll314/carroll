@@ -1,19 +1,7 @@
 基于 Sleep-EDF 的睡眠脑电信号环境对比分析
 项目简介
 本项目基于 Sleep-EDF Expanded 公开数据库，选取实验室记录与居家记录两条整夜睡眠脑电数据，从时域统计、频域功率谱、时频联合分析三个维度进行系统对比，定量提取 δ、θ、α、σ、β 五个标准频段的能量分布，并计算 α/δ 能量比作为睡眠深度量化指标，探究记录环境对睡眠脑电信号的具体影响。
-项目结构
-carroll/
-├── code/ # 源代码目录
-│ ├── config.py # 配置文件
-│ ├── preprocessing.py # 预处理模块
-│ ├── analysis.py # 分析模块
-│ ├── visualization.py # 可视化模块
-│ └── main.py # 主程序入口
-├── data/ # 数据目录（需自行下载）
-├── figures/ # 输出图表目录
-├── requirements.txt # Python依赖库清单
-└── README.md # 项目说明
-text
+
 运行环境与依赖
 环境要求
 - Python 3.10 及以上
